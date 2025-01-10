@@ -55,12 +55,12 @@ Follow these steps carefully and read each command before executing.
 
 5. Create an S3 bucket for storing the kOps objects:
     ```sh
-    aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
+    aws s3api create-bucket --bucket kops-dheeraj-storage --region us-east-1
     ```
 
 6. Create the cluster:
     ```sh
-    kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro --master-volume-size=8 --node-volume-size=8
+    kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-dheeraj-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro --master-volume-size=8 --node-volume-size=8
     ```
 
 7. Edit the cluster configuration to ensure resources fit within the free tier (if applicable):
@@ -70,7 +70,7 @@ Follow these steps carefully and read each command before executing.
 
 8. Build the cluster:
     ```sh
-    kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-abhi-storage
+    kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-dheeraj-storage
     ```
     This will take a few minutes to complete.
 
