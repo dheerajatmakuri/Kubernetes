@@ -66,8 +66,8 @@ Follow these steps carefully and read each command before executing.
 7. Edit the cluster configuration to ensure resources fit within the free tier (if applicable):
     ```sh
     kops edit cluster demok8scluster.k8s.local
-    ```
- -- do not use this for trail purpose as this may incure costs, if you have free credits then proceed building the cluster
+    ``` -- do not use this for trail purpose as this may incure costs, if you have free credits then proceed building the cluster
+ 
 8. Build the cluster:
     ```sh
     kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-dheeraj-storage
