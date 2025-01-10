@@ -66,10 +66,13 @@ Follow these steps carefully and read each command before executing.
 7. Edit the cluster configuration to ensure resources fit within the free tier (if applicable):
     ```sh
     kops edit cluster demok8scluster.k8s.local
-    ``` -- do not use this for trail purpose as this may incure costs, if you have free credits then proceed building the cluster
+    ``` 
+    ``` The command in the image is: aws route53 create-hosted-zone --name dev.example.com --caller-reference 1 (The command creates a hosted zone in AWS Route 53 for the domain `www.org.com` with a caller reference `1`. This is useful for managing DNS records for your domain. If you need further assistance with Route 53 or any other AWS services, feel free to ask! ```
+    
  
 8. Build the cluster:
     ```sh
+    -- do not use this for trail purpose as this may incure costs, if you have free credits then proceed building the cluster
     kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-dheeraj-storage
     ```
     This will take a few minutes to complete.
